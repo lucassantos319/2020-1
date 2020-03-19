@@ -1,0 +1,20 @@
+header{ 
+    font-family: 'Baloo Chettan 2', cursive;
+    padding-left: 10px;
+    padding-bottom: -10px;
+}
+
+#home{
+    font-family: 'Baloo Chettan 2', cursive;
+    color:white;
+    background-image: url("./src/bg4.png");
+    height: 300px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
+}
+
+.nav-item.a:hover{
+    background-color: aquamarine;
+}
