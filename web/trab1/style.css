@@ -13,8 +13,58 @@ header{
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
     background-attachment: fixed;
+    border: 1px solid #000000;
 }
 
-.nav-item.a:hover{
-    background-color: aquamarine;
+
+.simple_paragraph{
+    color: black;
+    text-indent: 1em;
+    margin-left:15%;
+    margin-right: 15%;  
+    text-size-adjust: 1px;
+}
+
+.work-template{
+    margin-left:15%;
+    margin-right: 15%;  
+    border: 1px solid #000000;
+    border-radius: 1em;
+}
+
+.work-template-item{
+    display: inline;
+    border: 1px solid #cccccc;
+}
+
+.round{
+    min-height: 255px;
+    margin-top: 30px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.round strong{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top: -50px;
+    transform: translate(-50%);
+    font-size: 40px;
+    color:#212121;
+    font-weight: 100;
+
+}
+
+.round span{
+    display: block;
+    color:#999;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.round span i{
+    color: #ff5c5c;
+    font-size: 22px;
+    margin-right: 7px;
 }

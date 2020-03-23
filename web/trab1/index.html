@@ -6,11 +6,25 @@
         <meta charset="UTF-8">
         <meta lang="pt-br">  
         <meta name="author" content="Lucas Sidnei dos Santos">
-        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">   
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="shortcut icon" href="./src/bgWhite.png" />
         <link rel="stylesheet" href="./style.css">
-        
+
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js">
+        <script>
+
+            function Circlle(el){
+                $(el).circleProgress({fill:{color:'#ff5c5c'}}).
+                on('circle-animation-progress',function(event,progress,
+                stepValue){
+                    $(this).find('strong').text(String(stepValue.toFixed(2))+'%');
+                });
+            };
+
+            Circlle('.round');
+        </script>
+
     </head>
 
     <body class="myBody">
@@ -26,9 +40,6 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown" style="align-items: flex-end">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-
-                            <!-- Ajeitar o Logo  -->
-                            <!-- <h1 style="      border:1px solid #000000;border-radius:100% " class="rounded-circle">LS</h1> -->
                             <img src="./src/logo.png" width="70" height="70" class="rounded-circle">
                         </li>
                     </ul>
@@ -36,8 +47,8 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="#work" class="nav-link">Work/Knownledge</a></li>
-                        <li class="nav-item"><a href="#aboutme" class="nav-link">About Me</a></li>
                         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="#webtrab" class="nav-link">CI1010-Trabalho</a></li>
 
                     </ul>
                 </div>
@@ -45,27 +56,40 @@
     
         </header>
         
-        <hr style="margin-top: 0.5em;">
-        
+        <hr style="margin-top: 0.5em; width: 70%;">
         <main>
-            <section id="home" >
-                <h1 style="padding-top:6em; padding-left: 1em;">Home</h1> 
-                <h4 style="color: black; padding-top: 4em ;padding-left: 1.7em;">okodskaokdoask</h4>
+   
+            <section id="home" class="row" >
+                <h1 style="padding-top:6em; padding-left: 2em;">Home</h1> 
+                <h4 class="simple_paragraph " style="padding-top: 2em;" >
+                    Estudante de Ciência da Computação da <a href="https://www.ufpr.br/portalufpr/" style="color: black;">UFPR</a>,
+                    entusiasta de novas tecnologias com interesse em áreas de processamento de imagem, inteligência ,
+                    captura de imagem por drones, analise de dados, entre outros.
+                </h4>
             </section>
+         
+            <section id="work">
             
-            <section id="work" style="padding-top: 40em;">
-                <h1 >Work</h1>
-                <p>kdosajodjaoijdas</p>
+                <h1 style="padding-top:4.5em; padding-left: 2em;" >Work</h1>
+                <div class="work-template">
+                    <div class="row">
+                        <div class="col-md-3 round" data-value="0.5" data-size="200" data-thickness="12">
+                            <strong></strong>
+                            <span>
+                                <i class="fa fa-html5"></i>
+                                htmlSckill
+                            </span>
+                        </div>
+                
+                    </div>                   
+                </div>
+                    
             </section>
-        
-            <section id="aboutme">
-                <h1>About me</h1>
-            </section>
-        
+                
             <section id="contact">
-               <h1>Contact</h1>
+                <h1 style="padding-top:1em; padding-left: 2em;">Contact</h1>
             </section>
-
+    
         </main>
 
     </body>
